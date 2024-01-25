@@ -1,8 +1,0 @@
-
-@	java:S106"+Replace this use of System.out by a logger.(™Þé¢
-W
-java:S1126"AReplace this if-then-else statement by a single return statement.(Ážð¾
-M
-java:S1128"2Remove this unused import 'java.util.Collections'.(¢³ïÓþÿÿÿÿ
-E
-java:S1128"*Remove this unused import 'java.util.Set'.(ö²„¤þÿÿÿÿ
