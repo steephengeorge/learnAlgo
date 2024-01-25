@@ -1,0 +1,9 @@
+
+[
+java:S3516"9Refactor this method to not always return the same value.(§внгыяяяя8‹ЋЭЏФ1
+c
+java:S1075"ARefactor your code to get this URI from a customizable parameter.(чЫњЋюяяяя8–ЋЭЏФ1
+љ
+java:S1130 "xRemove the declaration of thrown exception 'java.io.FileNotFoundException' which is a subclass of 'java.io.IOException'.(щаж щяяяя8ГЋЭЏФ1
+G	java:S106-"+Replace this use of System.out by a logger.(љЧ‹8ЪЋЭЏФ1
+L	java:S106."+Replace this use of System.out by a logger.(єЄ¬·ыяяяя8ЬЋЭЏФ1
