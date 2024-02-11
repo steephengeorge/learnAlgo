@@ -1,4 +1,4 @@
-package com.soulmeadows;
+package com.soulmeadows.sort;
 
 public class QuickSort {
 
