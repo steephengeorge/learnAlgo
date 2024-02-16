@@ -4,46 +4,52 @@ public class CountMatchingSubArrayKMP {
     private static int[] longestPrefixSuffix(int[] pattern){
         int[] lps = new int[pattern.length];
         int prevLps = 0;
-        lps[prevLps] = 0;
-        for(int i = 1; i < pattern.length;){
+        int i = 1;
+        while(i < pattern.length){
             if(pattern[i] == pattern[prevLps]){
                 lps[i] = prevLps + 1;
                 ++i;
                 ++prevLps;
             }else if(prevLps == 0){
-                lps[i++] = 0;
+                ++i;
             }else {
                 prevLps = lps[prevLps -1];
             }
         }
         return lps;
     }
-    public static int countMatchingSubarrays(int[] nums, int[] pattern) {
-        int count = 0;
 
-        int[] lps= longestPrefixSuffix(pattern);
-        int[] nums2 = new int[nums.length -1];
-        for(int i = 0; i < nums.length - 1; ++i){
-            if(nums[i] < nums[i+1]){
+    private static int[] patternizeNums(int[] nums){
+        int[] nums2 = new int[nums.length - 1];
+        for(int i =0; i < nums.length - 1; ++i){
+            if(nums[i] < nums[i + 1]){
                 nums2[i] = 1;
-            } else if(nums[i] > nums[i+1]){
+            }else if(nums[i] > nums[i + 1]){
                 nums2[i] = -1;
-            }else{
+            }else {
                 nums2[i] = 0;
             }
         }
-        for(int i = 0, j = 0; i < nums2.length ;){
-            if( nums2[i] == pattern[j] ){
+        return nums2;
+    }
+    public static int countMatchingSubarrays(int[] nums, int[] pattern) {
+        int [] lps = longestPrefixSuffix(pattern);
+        int [] nums2 = patternizeNums(nums);
+        int i = 0;
+        int j = 0;
+        int count = 0;
+        while(i < nums2.length){
+            if(nums2[i] == pattern[j]){
                 ++i;
                 ++j;
-            } else if(j == 0){
+            }else if(j == 0){
                 ++i;
-            }else{
+            }else {
                 j = lps[j - 1];
             }
             if(j == pattern.length){
                 ++count;
-                j = lps[j -1];
+                j = lps[j - 1];
             }
         }
         return count;
