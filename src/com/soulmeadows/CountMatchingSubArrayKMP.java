@@ -1,5 +1,5 @@
 package com.soulmeadows;
-
+//https://leetcode.com/problems/number-of-subarrays-that-match-a-pattern-ii/description/
 public class CountMatchingSubArrayKMP {
     private static int[] longestPrefixSuffix(int[] pattern){
         int[] lps = new int[pattern.length];
