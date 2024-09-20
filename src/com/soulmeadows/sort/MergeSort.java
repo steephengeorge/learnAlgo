@@ -4,7 +4,8 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertArrayEquals;
 
-public class MergeSort {
+public class
+MergeSort {
 
     public void mergeSort(int[] a){
         if(a.length < 2){

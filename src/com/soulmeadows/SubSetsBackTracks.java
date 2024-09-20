@@ -3,7 +3,7 @@ package com.soulmeadows;
 import java.util.List;
 import java.util.ArrayList;
 
-public class SubSets {
+public class SubSetsBackTracks {
 
     public static List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> list = new ArrayList<>();
